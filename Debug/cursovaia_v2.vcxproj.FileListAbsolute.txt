@@ -1,0 +1,4 @@
+D:\курсач ОАИП\cursovaia_v2\Debug\cursovaia_v2.exe
+D:\курсач ОАИП\cursovaia_v2\Debug\cursovaia_v2.pdb
+D:\БНТУ курс 1\курсач ОАИП\cursovaia_v2\Debug\cursovaia_v2.exe
+D:\БНТУ курс 1\курсач ОАИП\cursovaia_v2\Debug\cursovaia_v2.pdb

@@ -1,0 +1,8 @@
+﻿  check_exit.cpp
+  edit.cpp
+  main.cpp
+  proc.cpp
+D:\курсач ОАИП\cursovaia_v2\proc.cpp(268,6): warning C4101: 'm': unreferenced local variable
+  Generating Code...
+D:\курсач ОАИП\cursovaia_v2\check_exit.cpp(46): warning C4715: 'inputSwitchValue': not all control paths return a value
+  cursovaia_v2.vcxproj -> D:\курсач ОАИП\cursovaia_v2\x64\Debug\cursovaia_v2.exe
