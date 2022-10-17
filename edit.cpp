@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 
 #include"edit.h"
 #include"check_exit.h"
@@ -7,8 +7,8 @@ void modeEdit(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 	int c;
 	while (true) {
 		system("cls");
-		cout << "РЕЖИМ РЕДАКТИРОВАНИЯ\n\n";
-		cout << " 1 - добавление информации о сотруднике\n 2 - просмотр информации о сотрудниках\n 3 - удаление информации о сотруднике\n 4 - просмотр информации об отделах\n 5 - добавление информации в текстовый файл\n 0 - выход\n";
+		cout << "Р Р•Р–РРњ Р Р•Р”РђРљРўРР РћР’РђРќРРЇ\n\n";
+		cout << " 1 - РґРѕР±Р°РІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєРµ\n 2 - РїСЂРѕСЃРјРѕС‚СЂ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…\n 3 - СѓРґР°Р»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєРµ\n 4 - РїСЂРѕСЃРјРѕС‚СЂ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РѕС‚РґРµР»Р°С…\n 5 - РґРѕР±Р°РІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё РІ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»\n 0 - РІС‹С…РѕРґ\n";
 		c = inputSwitchValue(0, 5);
 		if (c == 0) {
 			break;
@@ -28,15 +28,15 @@ void modeEdit(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 void inpData(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 	int m;
 	system("cls");
-	cout << "Вы уверены, что хотите добавить запись? (1 - продолжить, 0 - выйти)" << endl;
+	cout << "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РґРѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ? (1 - РїСЂРѕРґРѕР»Р¶РёС‚СЊ, 0 - РІС‹Р№С‚Рё)" << endl;
 	cin >> m;
 	if (m == 1) {
-		cout << "Введите информацию о сотруднике(имя, отдел, должность, зарплата)\n";
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєРµ(РёРјСЏ, РѕС‚РґРµР», РґРѕР»Р¶РЅРѕСЃС‚СЊ, Р·Р°СЂРїР»Р°С‚Р°)\n";
 
-		//добавление нового сотрудника
+		//РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР°
 
 		Employee* newArrE = new Employee[sizeE + 1];
-		for (int i = 0; i < sizeE; i++) //копирование старого массива
+		for (int i = 0; i < sizeE; i++) //РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃС‚Р°СЂРѕРіРѕ РјР°СЃСЃРёРІР°
 		{
 			newArrE[i].nameEmp = arrE[i].nameEmp;
 			newArrE[i].position = arrE[i].position;
@@ -44,28 +44,28 @@ void inpData(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 			newArrE[i].salaryMonth = arrE[i].salaryMonth;
 		}
 
-		cin >> newArrE[sizeE].nameEmp; //ввод информации о новом сотруднике
+		cin >> newArrE[sizeE].nameEmp; //РІРІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅРѕРІРѕРј СЃРѕС‚СЂСѓРґРЅРёРєРµ
 		cin >> newArrE[sizeE].nameDep;
 		cin >> newArrE[sizeE].position;
-		newArrE[sizeE].salaryMonth = inputSalaryValue(); //проверка значения зарплаты
-		cout << endl << "добавление прошло успешно! " << endl << endl;
+		newArrE[sizeE].salaryMonth = inputSalaryValue(); //РїСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёСЏ Р·Р°СЂРїР»Р°С‚С‹
+		cout << endl << "РґРѕР±Р°РІР»РµРЅРёРµ РїСЂРѕС€Р»Рѕ СѓСЃРїРµС€РЅРѕ! " << endl << endl;
 		system("pause");
 
-		//добавление нового отдела
+		//РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РѕС‚РґРµР»Р°
 
-		bool flag = true; //если отдел сотрудника не новый, присвоение флагу false
+		bool flag = true; //РµСЃР»Рё РѕС‚РґРµР» СЃРѕС‚СЂСѓРґРЅРёРєР° РЅРµ РЅРѕРІС‹Р№, РїСЂРёСЃРІРѕРµРЅРёРµ С„Р»Р°РіСѓ false
 		for (int i = 0; i < sizeD; i++) {
 			if (arrD[i].nameDep == newArrE[sizeE].nameDep) {
 				flag = false;
 			}
 		}
 
-		if (flag) { //eсли отдел сотрудника новый, добаление названия отдела 
+		if (flag) { //eСЃР»Рё РѕС‚РґРµР» СЃРѕС‚СЂСѓРґРЅРёРєР° РЅРѕРІС‹Р№, РґРѕР±Р°Р»РµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ РѕС‚РґРµР»Р° 
 			Department* newArrD = new Department[sizeD + 1];
-			for (int i = 0; i < sizeD; i++) { //копирование массива
+			for (int i = 0; i < sizeD; i++) { //РєРѕРїРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР°
 				newArrD[i].nameDep = arrD[i].nameDep;
 			}
-			newArrD[sizeD].nameDep = newArrE[sizeE].nameDep; //добавление названия нового отдела
+			newArrD[sizeD].nameDep = newArrE[sizeE].nameDep; //РґРѕР±Р°РІР»РµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ РЅРѕРІРѕРіРѕ РѕС‚РґРµР»Р°
 			sizeD++;
 			delete[] arrD;
 			arrD = newArrD;
@@ -82,9 +82,9 @@ void inpData(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 
 void reprEmployee(Employee* arrE, int sizeE) {
 	system("cls");
-	//вывод информации о сотрудниках
+	//РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…
 
-	printf("%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+	printf("%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 	for (int i = 0; i < sizeE; i++) {
 		printf("%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
 	}
@@ -95,16 +95,16 @@ void reprEmployee(Employee* arrE, int sizeE) {
 void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 	system("cls");
 	int m;
-	cout << "Вы уверены, что хотите удалить запись? (1 - продолжить, 0 - выйти)" << endl;
+	cout << "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ? (1 - РїСЂРѕРґРѕР»Р¶РёС‚СЊ, 0 - РІС‹Р№С‚Рё)" << endl;
 	cin >> m;
 	if (m == 1) {
 		int num, counter = 0;
 		bool flag = false;
 		if (sizeE > 0) {
 			Employee* newArrE = new Employee[sizeE - 1];
-			num = inputDeleteValue(arrE, sizeE); //ввод и проверка индекса удаляемого сотрудника
+			num = inputDeleteValue(arrE, sizeE); //РІРІРѕРґ Рё РїСЂРѕРІРµСЂРєР° РёРЅРґРµРєСЃР° СѓРґР°Р»СЏРµРјРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР°
 
-			//удаление отдела, если удаляемый сотрудник был единственным в своём отделе
+			//СѓРґР°Р»РµРЅРёРµ РѕС‚РґРµР»Р°, РµСЃР»Рё СѓРґР°Р»СЏРµРјС‹Р№ СЃРѕС‚СЂСѓРґРЅРёРє Р±С‹Р» РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј РІ СЃРІРѕС‘Рј РѕС‚РґРµР»Рµ
 
 			for (int i = 0; (i < sizeE); i++) {
 				if ((arrE[i].nameDep == arrE[num - 1].nameDep) && (i != num - 1)) {
@@ -124,7 +124,7 @@ void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 				arrD = newArrD;
 			}
 
-			//удаление сотрудника
+			//СѓРґР°Р»РµРЅРёРµ СЃРѕС‚СЂСѓРґРЅРёРєР°
 
 			for (int i = 0, j = 0; (j < sizeE - 1); i++, j++)
 			{
@@ -138,7 +138,7 @@ void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 					j--;
 			}
 
-			cout << "удаление прошло успешно!" << endl << endl;
+			cout << "СѓРґР°Р»РµРЅРёРµ РїСЂРѕС€Р»Рѕ СѓСЃРїРµС€РЅРѕ!" << endl << endl;
 			system("pause");
 
 			sizeE--;
@@ -146,7 +146,7 @@ void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 			arrE = newArrE;
 		}
 		else {
-			cout << "Удаление невозможно. Список сотрудников пуст!" << endl << endl;
+			cout << "РЈРґР°Р»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ. РЎРїРёСЃРѕРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїСѓСЃС‚!" << endl << endl;
 			system("pause");
 		}
 	}
@@ -158,14 +158,14 @@ void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 
 void reprDepartment(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 	system("cls");
-	//подсчёт суммы и средней зарплаты по отделам
+	//РїРѕРґСЃС‡С‘С‚ СЃСѓРјРјС‹ Рё СЃСЂРµРґРЅРµР№ Р·Р°СЂРїР»Р°С‚С‹ РїРѕ РѕС‚РґРµР»Р°Рј
 
 	salarySum(arrE, sizeE, arrD, sizeD);
 	salaryMean(arrE, sizeE, arrD, sizeD);
 
-	//вывод информации об отделах
+	//РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РѕС‚РґРµР»Р°С…
 
-	printf("%-10s%-20s%-20s%-20s\n", "Номер", "Отдел", "Сумма", "Среднее");
+	printf("%-10s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РћС‚РґРµР»", "РЎСѓРјРјР°", "РЎСЂРµРґРЅРµРµ");
 	for (int i = 0; i < sizeD; i++)
 	{
 
@@ -179,14 +179,14 @@ void reprDepartment(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 	system("cls");
 	int m;
-	cout << "Вы уверены, что хотите получить файл с записями? (1 - продолжить, 0 - выйти)" << endl;
+	cout << "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РїРѕР»СѓС‡РёС‚СЊ С„Р°Р№Р» СЃ Р·Р°РїРёСЃСЏРјРё? (1 - РїСЂРѕРґРѕР»Р¶РёС‚СЊ, 0 - РІС‹Р№С‚Рё)" << endl;
 	cin >> m;
 	if (m == 1) {
-		FILE* fout = fopen("out_dataframe.txt", "w"); //открытие файла
+		FILE* fout = fopen("out_dataframe.txt", "w"); //РѕС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°
 
-		//запись информации о сотрудниках в файл
+		//Р·Р°РїРёСЃСЊ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С… РІ С„Р°Р№Р»
 
-		fprintf(fout, "%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+		fprintf(fout, "%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 
 		for (int i = 0; i < sizeE; i++) {
 			fprintf(fout, "%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
@@ -194,11 +194,11 @@ void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 		}
 		fprintf(fout, "\n");
 
-		//запись информации об отделах в файл
+		//Р·Р°РїРёСЃСЊ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РѕС‚РґРµР»Р°С… РІ С„Р°Р№Р»
 
 		salarySum(arrE, sizeE, arrD, sizeD);
 		salaryMean(arrE, sizeE, arrD, sizeD);
-		fprintf(fout, "%-10s%-20s%-20s%-20s\n", "Номер", "Отдел", "Сумма", "Среднее");
+		fprintf(fout, "%-10s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РћС‚РґРµР»", "РЎСѓРјРјР°", "РЎСЂРµРґРЅРµРµ");
 
 		for (int i = 0; i < sizeD; i++)
 		{
@@ -206,7 +206,7 @@ void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 			fprintf(fout, "%-10d%-20s%-20.2f%-20.2f\n", i + 1, arrD[i].nameDep.c_str(), arrD[i].salarySum, arrD[i].salaryMean);
 
 		}
-		cout << "Запись была успешно проведена!\n";
+		cout << "Р—Р°РїРёСЃСЊ Р±С‹Р»Р° СѓСЃРїРµС€РЅРѕ РїСЂРѕРІРµРґРµРЅР°!\n";
 		system("pause");
 		cout << endl << endl;
 
@@ -220,7 +220,7 @@ void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 
 void salarySum(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 
-	//подсчёт суммы зарплат по отделу
+	//РїРѕРґСЃС‡С‘С‚ СЃСѓРјРјС‹ Р·Р°СЂРїР»Р°С‚ РїРѕ РѕС‚РґРµР»Сѓ
 
 	for (int i = 0; i < sizeD; i++)
 	{
@@ -237,7 +237,7 @@ void salarySum(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 
 void salaryMean(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 
-	//подсчёт средней зарплаты по отделу
+	//РїРѕРґСЃС‡С‘С‚ СЃСЂРµРґРЅРµР№ Р·Р°СЂРїР»Р°С‚С‹ РїРѕ РѕС‚РґРµР»Сѓ
 
 	for (int i = 0; i < sizeD; i++)
 	{
@@ -278,7 +278,7 @@ void initStructs(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 			}
 			if (flag) {
 				Department* newArrD = new Department[sizeD + 1];
-				for (int k = 0; k < sizeD; k++) { //копирование массива
+				for (int k = 0; k < sizeD; k++) { //РєРѕРїРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР°
 					newArrD[k].nameDep = arrD[k].nameDep;
 				}
 				newArrD[sizeD].nameDep = newArrE[i].nameDep;
@@ -294,7 +294,7 @@ void initStructs(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 		file.close();
 	}
 	else {
-		cout << "Ошибка при открытии файла!" << endl;
+		cout << "РћС€РёР±РєР° РїСЂРё РѕС‚РєСЂС‹С‚РёРё С„Р°Р№Р»Р°!" << endl;
 	}
 }
 	

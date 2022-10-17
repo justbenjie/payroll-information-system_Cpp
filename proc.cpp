@@ -1,4 +1,4 @@
-#include"proc.h"
+п»ї#include"proc.h"
 #include"check_exit.h"
 #include"edit.h"
 
@@ -6,8 +6,8 @@ void modeProc(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 	int c;
 	while (true) {
 		system("cls");
-		cout << "РЕЖИМ ОБРАБОТКИ\n\n";
-		cout << " 1 - сортировка сотрудников\n 2 - сортировка отделов\n 3 - поиск сотрудников с зарплатой ниже заданной с клавиатуры\n 4 - поиск сотрудников по параметрам\n 5 - поиск отделов по названию \n 0 - выход\n";
+		cout << "Р Р•Р–РРњ РћР‘Р РђР‘РћРўРљР\n\n";
+		cout << " 1 - СЃРѕСЂС‚РёСЂРѕРІРєР° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ\n 2 - СЃРѕСЂС‚РёСЂРѕРІРєР° РѕС‚РґРµР»РѕРІ\n 3 - РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ СЃ Р·Р°СЂРїР»Р°С‚РѕР№ РЅРёР¶Рµ Р·Р°РґР°РЅРЅРѕР№ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹\n 4 - РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј\n 5 - РїРѕРёСЃРє РѕС‚РґРµР»РѕРІ РїРѕ РЅР°Р·РІР°РЅРёСЋ \n 0 - РІС‹С…РѕРґ\n";
 		c = inputSwitchValue(0, 5);
 		if (c == 0) {
 			break;
@@ -27,8 +27,8 @@ void modeProc(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD) {
 void searchEmplByParam(const Employee* const arrE, const int sizeE) {
 	system("cls");
 	int ch;
-	cout << "По какому параметру вы хотите найти сотрудников?(1 - имя, 2 - зарплата, 3 - должность)\n";
-	cin >> ch; //выбор парараметра сортировки
+	cout << "РџРѕ РєР°РєРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ РІС‹ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ?(1 - РёРјСЏ, 2 - Р·Р°СЂРїР»Р°С‚Р°, 3 - РґРѕР»Р¶РЅРѕСЃС‚СЊ)\n";
+	cin >> ch; //РІС‹Р±РѕСЂ РїР°СЂР°СЂР°РјРµС‚СЂР° СЃРѕСЂС‚РёСЂРѕРІРєРё
 	cout << endl;
 	switch (ch)
 	{
@@ -40,11 +40,11 @@ void searchEmplByParam(const Employee* const arrE, const int sizeE) {
 
 void searchByName(const Employee* const arrE, const int sizeE) {
 	string p;
-	cout << "Введите имя\n";
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ\n";
 	cin.ignore(32767, '\n');
 	getline(cin, p);
 	cout << endl;
-	printf("%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+	printf("%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 	for (int i = 0; i < sizeE; i++) {
 		if (arrE[i].nameEmp == p) {
 			printf("%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
@@ -56,11 +56,11 @@ void searchByName(const Employee* const arrE, const int sizeE) {
 
 void searchBySalary(const Employee* const arrE, const int sizeE) {
 	double p;
-	cout << "Введите зарплату\n";
+	cout << "Р’РІРµРґРёС‚Рµ Р·Р°СЂРїР»Р°С‚Сѓ\n";
 	cin.ignore(32767, '\n');
 	cin >> p;
 	cout << endl;
-	printf("%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+	printf("%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 	for (int i = 0; i < sizeE; i++) {
 		if (abs(arrE[i].salaryMonth - p) < 0.00001) {
 			printf("%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
@@ -72,11 +72,11 @@ void searchBySalary(const Employee* const arrE, const int sizeE) {
 
 void searchByPosition(const Employee* const arrE, const int sizeE) {
 	string p;
-	cout << "Введите должность\n";
+	cout << "Р’РІРµРґРёС‚Рµ РґРѕР»Р¶РЅРѕСЃС‚СЊ\n";
 	cin.ignore(32767, '\n');
 	getline(cin, p);
 	cout << endl;
-	printf("%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+	printf("%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 	for (int i = 0; i < sizeE; i++) {
 		if (arrE[i].position == p) {
 			printf("%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
@@ -89,14 +89,14 @@ void searchByPosition(const Employee* const arrE, const int sizeE) {
 void searchDepByName(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 	system("cls");
 	string p;
-	cout << "Введите название отдела\n";
+	cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РѕС‚РґРµР»Р°\n";
 	cin.ignore(32767, '\n');
 	getline(cin, p);
 	cout << endl;
 	salarySum(arrE, sizeE, arrD, sizeD);
 	salaryMean(arrE, sizeE, arrD, sizeD);
 
-	printf("%-10s%-20s%-20s%-20s\n", "Номер", "Отдел", "Сумма", "Среднее");
+	printf("%-10s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РћС‚РґРµР»", "РЎСѓРјРјР°", "РЎСЂРµРґРЅРµРµ");
 	for (int i = 0; i < sizeD; i++)
 	{
 		if (arrD[i].nameDep == p) {
@@ -110,19 +110,19 @@ void searchDepByName(Employee* arrE, int sizeE, Department* arrD, int sizeD) {
 void sortEmployee(Employee* arrE, int sizeE) {
 	system("cls");
 	int m;
-	cout << "Вы уверены, что хотите отсортировать список сотрудников? (1 - продолжить, 0 - выйти)" << endl;
+	cout << "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ СЃРїРёСЃРѕРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ? (1 - РїСЂРѕРґРѕР»Р¶РёС‚СЊ, 0 - РІС‹Р№С‚Рё)" << endl;
 	cin >> m;
 	if (m == 1) {
 		int ch;
-		cout << "По какому параметру вы хотите провести сортировку?(имя, зарплата)\n";
-		cin >> ch; //выбор парараметра сортировки
+		cout << "РџРѕ РєР°РєРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ РІС‹ С…РѕС‚РёС‚Рµ РїСЂРѕРІРµСЃС‚Рё СЃРѕСЂС‚РёСЂРѕРІРєСѓ?(РёРјСЏ, Р·Р°СЂРїР»Р°С‚Р°)\n";
+		cin >> ch; //РІС‹Р±РѕСЂ РїР°СЂР°СЂР°РјРµС‚СЂР° СЃРѕСЂС‚РёСЂРѕРІРєРё
 		cout << endl;
 		switch (ch)
 		{
 		case 1: sortByEmpName(arrE, sizeE); break;
 		case 2: sortByEmpSalary(arrE, sizeE); break;
 		}
-		cout << "сортировка прошла успешно" << endl << endl;
+		cout << "СЃРѕСЂС‚РёСЂРѕРІРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ" << endl << endl;
 		system("pause");
 	}
 	else {
@@ -133,7 +133,7 @@ void sortEmployee(Employee* arrE, int sizeE) {
 
 void sortByEmpName(Employee* arrE, int sizeE) {
 
-	//сортировка пузырьком по имени
+	//СЃРѕСЂС‚РёСЂРѕРІРєР° РїСѓР·С‹СЂСЊРєРѕРј РїРѕ РёРјРµРЅРё
 
 	for (int i = sizeE - 1; i >= 0; i--)
 	{
@@ -151,7 +151,7 @@ void sortByEmpName(Employee* arrE, int sizeE) {
 
 void sortByEmpDep(Employee* arrE, int sizeE) {
 
-	//сортировка пузырьком по названию отдела
+	//СЃРѕСЂС‚РёСЂРѕРІРєР° РїСѓР·С‹СЂСЊРєРѕРј РїРѕ РЅР°Р·РІР°РЅРёСЋ РѕС‚РґРµР»Р°
 
 	for (int i = sizeE - 1; i >= 0; i--)
 	{
@@ -169,7 +169,7 @@ void sortByEmpDep(Employee* arrE, int sizeE) {
 
 void sortByEmpSalary(Employee* arrE, int sizeE) {
 
-	//сортировка пузырьком по зарплате
+	//СЃРѕСЂС‚РёСЂРѕРІРєР° РїСѓР·С‹СЂСЊРєРѕРј РїРѕ Р·Р°СЂРїР»Р°С‚Рµ
 
 	for (int i = sizeE - 1; i >= 0; i--)
 	{
@@ -188,20 +188,20 @@ void sortByEmpSalary(Employee* arrE, int sizeE) {
 void sortDepartment(Department* arrD, int sizeD) {
 	system("cls");
 	int m;
-	cout << "Вы уверены, что хотите отсортировать отделы? (1 - продолжить, 0 - выйти)" << endl;
+	cout << "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РѕС‚РґРµР»С‹? (1 - РїСЂРѕРґРѕР»Р¶РёС‚СЊ, 0 - РІС‹Р№С‚Рё)" << endl;
 	cin >> m;
 	if (m == 1) {
 		int ch;
-		cout << "По какому параметру вы хотите отсортировать отделы?(имя, сумма, среднее)\n";
+		cout << "РџРѕ РєР°РєРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ РІС‹ С…РѕС‚РёС‚Рµ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РѕС‚РґРµР»С‹?(РёРјСЏ, СЃСѓРјРјР°, СЃСЂРµРґРЅРµРµ)\n";
 		cin >> ch;
 		cout << endl;
-		switch (ch) //сортировка отделов по заданному параметру
+		switch (ch) //СЃРѕСЂС‚РёСЂРѕРІРєР° РѕС‚РґРµР»РѕРІ РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ
 		{
 		case 1: sortDepByName(arrD, sizeD); break;
 		case 2: sortDepBySum(arrD, sizeD); break;
 		case 3: sortDepByMean(arrD, sizeD); break;
 		}
-		cout << "сортировка прошло успешно" << endl << endl;
+		cout << "СЃРѕСЂС‚РёСЂРѕРІРєР° РїСЂРѕС€Р»Рѕ СѓСЃРїРµС€РЅРѕ" << endl << endl;
 		system("pause");
 	}
 	else {
@@ -212,7 +212,7 @@ void sortDepartment(Department* arrD, int sizeD) {
 
 void sortDepByName(Department* arrD, int sizeD) {
 
-	//сортировка пузырьком по названию отдела
+	//СЃРѕСЂС‚РёСЂРѕРІРєР° РїСѓР·С‹СЂСЊРєРѕРј РїРѕ РЅР°Р·РІР°РЅРёСЋ РѕС‚РґРµР»Р°
 
 	for (int i = sizeD - 1; i >= 0; i--)
 	{
@@ -229,7 +229,7 @@ void sortDepByName(Department* arrD, int sizeD) {
 }
 
 void sortDepBySum(Department* arrD, int sizeD) {
-	// сортировка по суммарной зарплате
+	// СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЃСѓРјРјР°СЂРЅРѕР№ Р·Р°СЂРїР»Р°С‚Рµ
 
 	for (int i = sizeD - 1; i >= 0; i--)
 	{
@@ -247,7 +247,7 @@ void sortDepBySum(Department* arrD, int sizeD) {
 
 void sortDepByMean(Department* arrD, int sizeD) {
 
-	//сортировка по средней зарплате
+	//СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЃСЂРµРґРЅРµР№ Р·Р°СЂРїР»Р°С‚Рµ
 
 	for (int i = sizeD - 1; i >= 0; i--)
 	{
@@ -265,14 +265,14 @@ void sortDepByMean(Department* arrD, int sizeD) {
 
 void empSalaryBelow(Employee* arrE, int sizeE) {
 	system("cls");
-	//вывод информации о сотрудниках с зарплатой ниже заданной
+	//РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С… СЃ Р·Р°СЂРїР»Р°С‚РѕР№ РЅРёР¶Рµ Р·Р°РґР°РЅРЅРѕР№
 	int m;
 
 	bool f = true;
 	double salary;
-	cout << "введите зарплату: " << endl << endl;
+	cout << "РІРІРµРґРёС‚Рµ Р·Р°СЂРїР»Р°С‚Сѓ: " << endl << endl;
 	cin >> salary;
-	printf("%-10s%-20s%-20s%-20s%-20s\n", "Номер", "Имя", "Отдел", "Должность", "Зарплата");
+	printf("%-10s%-20s%-20s%-20s%-20s\n", "РќРѕРјРµСЂ", "РРјСЏ", "РћС‚РґРµР»", "Р”РѕР»Р¶РЅРѕСЃС‚СЊ", "Р—Р°СЂРїР»Р°С‚Р°");
 	for (int i = 0; i < sizeE; i++) {
 		if (arrE[i].salaryMonth < salary) {
 			printf("%-10d%-20s%-20s%-20s%-20.2f\n", i + 1, arrE[i].nameEmp.c_str(), arrE[i].nameDep.c_str(), arrE[i].position.c_str(), arrE[i].salaryMonth);
@@ -280,7 +280,7 @@ void empSalaryBelow(Employee* arrE, int sizeE) {
 		}
 	}
 	if (f) {
-		cout << "таких сотрудников нет\n";
+		cout << "С‚Р°РєРёС… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РЅРµС‚\n";
 		
 	}
 	system("pause");

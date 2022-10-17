@@ -1,14 +1,14 @@
-#pragma once
+п»ї#pragma once
 
 #include"structs.h"
 
-void modeEdit(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //меню режима редактирования
-void inpData(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //добавление информации о сотрудниках
-void reprEmployee(Employee* arrE, int sizeE); //просмотр информации о всех сотрудниках
-void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //удаление информации о сотрудниках
-void reprDepartment(Employee* arrE, int sizeE, Department* arrD, int sizeD); //просмотр информации о всех отделах
-void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD); //заполнение файла информацией о сотрудниках и отделах
-void salarySum(Employee* arrE, int sizeE, Department* arrD, int sizeD); //вычисление общей зарплаты отдела
-void salaryMean(Employee* arrE, int sizeE, Department* arrD, int sizeD); //вычисление средней зарплаты по отделу
-void initStructs(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //инициализация структур данными из файла
+void modeEdit(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //РјРµРЅСЋ СЂРµР¶РёРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
+void inpData(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //РґРѕР±Р°РІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…
+void reprEmployee(Employee* arrE, int sizeE); //РїСЂРѕСЃРјРѕС‚СЂ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РІСЃРµС… СЃРѕС‚СЂСѓРґРЅРёРєР°С…
+void delEmployee(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //СѓРґР°Р»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…
+void reprDepartment(Employee* arrE, int sizeE, Department* arrD, int sizeD); //РїСЂРѕСЃРјРѕС‚СЂ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РІСЃРµС… РѕС‚РґРµР»Р°С…
+void giveFile(Employee* arrE, int sizeE, Department* arrD, int sizeD); //Р·Р°РїРѕР»РЅРµРЅРёРµ С„Р°Р№Р»Р° РёРЅС„РѕСЂРјР°С†РёРµР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С… Рё РѕС‚РґРµР»Р°С…
+void salarySum(Employee* arrE, int sizeE, Department* arrD, int sizeD); //РІС‹С‡РёСЃР»РµРЅРёРµ РѕР±С‰РµР№ Р·Р°СЂРїР»Р°С‚С‹ РѕС‚РґРµР»Р°
+void salaryMean(Employee* arrE, int sizeE, Department* arrD, int sizeD); //РІС‹С‡РёСЃР»РµРЅРёРµ СЃСЂРµРґРЅРµР№ Р·Р°СЂРїР»Р°С‚С‹ РїРѕ РѕС‚РґРµР»Сѓ
+void initStructs(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃС‚СЂСѓРєС‚СѓСЂ РґР°РЅРЅС‹РјРё РёР· С„Р°Р№Р»Р°
  

@@ -1,19 +1,19 @@
-#pragma once
+п»ї#pragma once
 
 #include"structs.h"
 
-void modeProc(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //меню режима обработки
-void searchEmplByParam(const Employee* const arrE, const int sizeE); // поиск сотрудника по параметрам
-void searchByName(const Employee* const arrE, const int sizeE); //поиск сотрудника по имени
-void searchBySalary(const Employee* const arrE, const int sizeE); //поиск сотрудника по зарплате
-void searchByPosition(const Employee* const arrE, const int sizeE); //поиск сотрудника по должности
-void searchDepByName(Employee* arrE, int sizeE, Department* arrD, int sizeD); //поиск отдела по названию
-void sortByEmpDep(Employee* arrE, int sizeE); //сортировка сотрудников по отделам
-void sortEmployee(Employee* arrE, int sizeE); //сортировка сотрудников по заданному параметру
-void sortByEmpName(Employee* arrE, int sizeE); //сортировка по имени
-void sortByEmpSalary(Employee* arrE, int sizeE); //сортировка по зарплате
-void sortDepartment(Department* arrD, int sizeD); //сортировка отделов по заданному параметру
-void sortDepByName(Department* arrD, int sizeD); //сортировка по названию
-void sortDepBySum(Department* arrD, int sizeD); //сортировка по сумме зарплат
-void sortDepByMean(Department* arrD, int sizeD); //сортировка по средней зарплате
-void empSalaryBelow(Employee* arrE, int sizeE); //поиск сотрудников с зарплатой ниже заданной
+void modeProc(Employee*& arrE, int& sizeE, Department*& arrD, int& sizeD); //РјРµРЅСЋ СЂРµР¶РёРјР° РѕР±СЂР°Р±РѕС‚РєРё
+void searchEmplByParam(const Employee* const arrE, const int sizeE); // РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєР° РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј
+void searchByName(const Employee* const arrE, const int sizeE); //РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєР° РїРѕ РёРјРµРЅРё
+void searchBySalary(const Employee* const arrE, const int sizeE); //РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєР° РїРѕ Р·Р°СЂРїР»Р°С‚Рµ
+void searchByPosition(const Employee* const arrE, const int sizeE); //РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєР° РїРѕ РґРѕР»Р¶РЅРѕСЃС‚Рё
+void searchDepByName(Employee* arrE, int sizeE, Department* arrD, int sizeD); //РїРѕРёСЃРє РѕС‚РґРµР»Р° РїРѕ РЅР°Р·РІР°РЅРёСЋ
+void sortByEmpDep(Employee* arrE, int sizeE); //СЃРѕСЂС‚РёСЂРѕРІРєР° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїРѕ РѕС‚РґРµР»Р°Рј
+void sortEmployee(Employee* arrE, int sizeE); //СЃРѕСЂС‚РёСЂРѕРІРєР° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ
+void sortByEmpName(Employee* arrE, int sizeE); //СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РёРјРµРЅРё
+void sortByEmpSalary(Employee* arrE, int sizeE); //СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ Р·Р°СЂРїР»Р°С‚Рµ
+void sortDepartment(Department* arrD, int sizeD); //СЃРѕСЂС‚РёСЂРѕРІРєР° РѕС‚РґРµР»РѕРІ РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ
+void sortDepByName(Department* arrD, int sizeD); //СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РЅР°Р·РІР°РЅРёСЋ
+void sortDepBySum(Department* arrD, int sizeD); //СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЃСѓРјРјРµ Р·Р°СЂРїР»Р°С‚
+void sortDepByMean(Department* arrD, int sizeD); //СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЃСЂРµРґРЅРµР№ Р·Р°СЂРїР»Р°С‚Рµ
+void empSalaryBelow(Employee* arrE, int sizeE); //РїРѕРёСЃРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ СЃ Р·Р°СЂРїР»Р°С‚РѕР№ РЅРёР¶Рµ Р·Р°РґР°РЅРЅРѕР№

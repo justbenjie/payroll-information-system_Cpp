@@ -1,8 +1,8 @@
-#pragma once
+п»ї#pragma once
 
 #include"structs.h"
 
-int inputDeleteValue(Employee* arrE, int sizeE); //проверка значения для удаления
-int inputSwitchValue(int l, int h); //проверка значения вызываемой операции
-double inputSalaryValue(); //проверка значения зарплаты сотрудников
-void exit(); //выход
+int inputDeleteValue(Employee* arrE, int sizeE); //РїСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ
+int inputSwitchValue(int l, int h); //РїСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёСЏ РІС‹Р·С‹РІР°РµРјРѕР№ РѕРїРµСЂР°С†РёРё
+double inputSalaryValue(); //РїСЂРѕРІРµСЂРєР° Р·РЅР°С‡РµРЅРёСЏ Р·Р°СЂРїР»Р°С‚С‹ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
+void exit(); //РІС‹С…РѕРґ
